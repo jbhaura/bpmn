@@ -16,4 +16,8 @@ export default class extends Controller {
 
     this.#viewer.importXML(this.xmlValue);
   }
+
+  disconnect() {
+    this.#viewer.clear();
+  }
 }

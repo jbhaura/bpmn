@@ -39,4 +39,8 @@ export default class extends Controller {
     const { xml } = await this.#modeler.saveXML();
     this.xmlOutputTarget.value = xml;
   }
+
+  disconnect() {
+    this.#modeler.clear();
+  }
 }
