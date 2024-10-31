@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus";
 
-import "bpmn-modeler";
+import BpmnModeler from "bpmn-js/lib/Modeler";
 
 export default class extends Controller {
   static targets = ["container", "xmlOutput"];
@@ -22,7 +22,7 @@ export default class extends Controller {
   #modeler;
 
   connect() {
-    this.#modeler = new BpmnJS({
+    this.#modeler = new BpmnModeler({
       container: this.containerTarget,
     });
 

@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus";
 
-import "bpmn-viewer";
+import BpmnViewer from "bpmn-js/lib/Viewer";
 
 export default class extends Controller {
   static targets = ["container"];
@@ -10,7 +10,7 @@ export default class extends Controller {
   #viewer;
 
   connect() {
-    this.#viewer = new BpmnJS({
+    this.#viewer = new BpmnViewer({
       container: this.containerTarget,
     });
 

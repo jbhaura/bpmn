@@ -1,6 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @workflow, show_bpmn_viewer: true %>
+<%= render @workflow %>
+
+<div data-controller="bpmn--viewer" data-bpmn--viewer-xml-value="<%= @workflow.data %>">
+    <div data-bpmn--viewer-target="container" style="height: 800px; border: 1px solid black; margin-top: 5px"></div>
+</div>
 
 <div>
   <%= link_to "Edit this workflow", edit_workflow_path(@workflow) %> |
