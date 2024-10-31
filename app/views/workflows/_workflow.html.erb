@@ -4,9 +4,13 @@
     <%= workflow.name %>
   </p>
 
-  <p>
-    <strong>Data:</strong>
-    <%= workflow.data %>
-  </p>
+  <% if local_assigns[:show_bpmn_viewer] == true %>
+    <p>
+        <strong>Data:</strong>
+        <div data-controller="bpmn--viewer" data-bpmn--viewer-xml-value="<%= workflow.data %>">
+            <div data-bpmn--viewer-target="container" style="height: 800px; border: 1px solid black; margin-top: 5px"></div>
+        </div>
+    </p>
+  <% end %>
 
 </div>

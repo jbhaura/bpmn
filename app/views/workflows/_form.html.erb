@@ -16,12 +16,13 @@
     <%= form.text_field :name %>
   </div>
 
-  <div>
-    <%= form.label :data, style: "display: block" %>
-    <%= form.text_area :data %>
+  <div data-controller="bpmn--modeler" data-bpmn--modeler-xml-value="<%= workflow.data %>">
+    <%= form.label :data, style: "display: block; margin-top: 20px" %>
+    <%= form.hidden_field :data, data: { bpmn__modeler_target: "xmlOutput" } %>
+    <div data-bpmn--modeler-target="container" style="height: 800px; border: 1px solid black; margin-top: 5px"></div>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit style: "margin-top: 20px" %>
   </div>
 <% end %>

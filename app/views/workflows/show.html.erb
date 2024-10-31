@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @workflow %>
+<%= render @workflow, show_bpmn_viewer: true %>
 
 <div>
   <%= link_to "Edit this workflow", edit_workflow_path(@workflow) %> |

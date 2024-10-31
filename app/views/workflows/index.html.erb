@@ -4,10 +4,12 @@
 
 <div id="workflows">
   <% @workflows.each do |workflow| %>
-    <%= render workflow %>
-    <p>
-      <%= link_to "Show this workflow", workflow %>
-    </p>
+    <div style="border: 1px solid black">
+        <%= render workflow %>
+        <p>
+        <%= link_to "Show this workflow", workflow %>
+        </p>
+    </div>
   <% end %>
 </div>
 
