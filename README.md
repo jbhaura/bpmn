@@ -1,24 +1,24 @@
-# README
+# Usage Instructions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Step 1
+Pull and enter git repository
+```bash
+git clone https://github.com/jbhaura/bpmn
 
-Things you may want to cover:
+cd bpmn
+```
 
-* Ruby version
+## Step 2
+Install bundle dependencies
+```bash
+bundle
+```
 
-* System dependencies
+## Step 3
+Start rails server
+```bash
+bin/rails server
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Step 4
+Go to `http://localhost:3000` (or whatever port the server is running on, its usually `3000`)
